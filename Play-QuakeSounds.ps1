@@ -1,28 +1,19 @@
 ﻿
-$scriptPath = split-path -parent $MyInvocation.MyCommand.Path
-$configFilePath = $scriptPath + "\takethatbitch.wav"
-Write-Host $configFilePath
- 
-function takethatbitch {
-    .\nircmd.exe setdefaultsounddevice "What U Hear" 2
-    .\nircmd.exe setdefaultsounddevice "What U Hear" 1
-    .\nircmd.exe setdefaultsounddevice "What U Hear" 0
 
-    powershell -Command {(New-Object Media.SoundPlayer("D:\Games\_FPS Doug\QuakeSounds\takethatbitch.wav")).PlaySync()}
+# Set Variable for Path where the script resides
+$PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent
 
-    .\nircmd.exe nircmd setdefaultsounddevice "Microphone" 2
-    .\nircmd.exe nircmd setdefaultsounddevice "Microphone" 1
-    .\nircmd.exe nircmd setdefaultsounddevice "Microphone" 0
-}
 
-& takethatbitch ; & takethatbitch
+# Play Source - Drop the .wav into the same directory as this .ps1 and edit the file name
+[string]$playpath1 = "$PSScriptRoot"+"\takethatbitch.wav"
 
-[string]$playpath1 = "$PWD"+"\takethatbitch.wav"
+
+
 
 function takethatbitch {
-    .\nircmd.exe setdefaultsounddevice "What U Hear" 2
-    .\nircmd.exe setdefaultsounddevice "What U Hear" 1
-    .\nircmd.exe setdefaultsounddevice "What U Hear" 0
+    $PSScriptRoot\nircmd.exe setdefaultsounddevice "What U Hear" 2
+    $PSScriptRoot\nircmd.exe setdefaultsounddevice "What U Hear" 1
+    $PSScriptRoot\nircmd.exe setdefaultsounddevice "What U Hear" 0
 
     Write-Output $playpath1
     $Playwav = new-object ('Media.SoundPlayer') $playpath1 
@@ -34,27 +25,9 @@ function takethatbitch {
     #Start-Sleep -Seconds 2.132
     #$Playwav.stop()
     
-    .\nircmd.exe nircmd setdefaultsounddevice "Microphone" 2
-    .\nircmd.exe nircmd setdefaultsounddevice "Microphone" 1
-    .\nircmd.exe nircmd setdefaultsounddevice "Microphone" 0
+    $PSScriptRoot\nircmd.exe nircmd setdefaultsounddevice "Microphone" 2
+    $PSScriptRoot\nircmd.exe nircmd setdefaultsounddevice "Microphone" 1
+    $PSScriptRoot\nircmd.exe nircmd setdefaultsounddevice "Microphone" 0
 }
 
 & takethatbitch
-
-    .\nircmd.exe setdefaultsounddevice "What U Hear" 2
-    .\nircmd.exe setdefaultsounddevice "What U Hear" 1
-    .\nircmd.exe setdefaultsounddevice "What U Hear" 0
-
-    Write-Output $playpath1
-    $Playwav = new-object ('Media.SoundPlayer') $playpath1 
-    #$Playwav.PlayLooping()
-    #$Playwav.LoadAsync()
-    #$Playwav.Play()
-    $Playwav.PlaySync()
-    
-    #Start-Sleep -Seconds 2.132
-    #$Playwav.stop()
-    
-    .\nircmd.exe nircmd setdefaultsounddevice "Microphone" 2
-    .\nircmd.exe nircmd setdefaultsounddevice "Microphone" 1
-    .\nircmd.exe nircmd setdefaultsounddevice "Microphone" 0
