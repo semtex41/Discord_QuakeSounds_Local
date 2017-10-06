@@ -1,0 +1,43 @@
+::Build Notes
+
+powershell.exe -ExecutionPolicy Bypass -File "D:\Games\QuakeSounds\Discord_QuakeSounds\Play-QuakeSounds.ps1"
+^works
+
+
+
+____________________
+
+PS D:\> $Playwav |gm
+
+
+   TypeName: System.Media.SoundPlayer
+
+Name                      MemberType Definition                                                                                                                                  
+----                      ---------- ----------                                                                                                                                  
+Disposed                  Event      System.EventHandler Disposed(System.Object, System.EventArgs)                                                                               
+LoadCompleted             Event      System.ComponentModel.AsyncCompletedEventHandler LoadCompleted(System.Object, System.ComponentModel.AsyncCompletedEventArgs)                
+SoundLocationChanged      Event      System.EventHandler SoundLocationChanged(System.Object, System.EventArgs)                                                                   
+StreamChanged             Event      System.EventHandler StreamChanged(System.Object, System.EventArgs)                                                                          
+CreateObjRef              Method     System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)                                                                             
+Dispose                   Method     void Dispose(), void IDisposable.Dispose()                                                                                                  
+Equals                    Method     bool Equals(System.Object obj)                                                                                                              
+GetHashCode               Method     int GetHashCode()                                                                                                                           
+GetLifetimeService        Method     System.Object GetLifetimeService()                                                                                                          
+GetObjectData             Method     void ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
+GetType                   Method     type GetType()                                                                                                                              
+InitializeLifetimeService Method     System.Object InitializeLifetimeService()                                                                                                   
+Load                      Method     void Load()                                                                                                                                 
+LoadAsync                 Method     void LoadAsync()                                                                                                                            
+Play                      Method     void Play()                                                                                                                                 
+PlayLooping               Method     void PlayLooping()                                                                                                                          
+PlaySync                  Method     void PlaySync()                                                                                                                             
+Stop                      Method     void Stop()                                                                                                                                 
+ToString                  Method     string ToString()                                                                                                                           
+Container                 Property   System.ComponentModel.IContainer Container {get;}                                                                                           
+IsLoadCompleted           Property   bool IsLoadCompleted {get;}                                                                                                                 
+LoadTimeout               Property   int LoadTimeout {get;set;}                                                                                                                  
+Site                      Property   System.ComponentModel.ISite Site {get;set;}                                                                                                 
+SoundLocation             Property   string SoundLocation {get;set;}                                                                                                             
+Stream                    Property   System.IO.Stream Stream {get;set;}                                                                                                          
+Tag                       Property   System.Object Tag {get;set;}                                                                                                                
+
